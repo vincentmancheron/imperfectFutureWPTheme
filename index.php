@@ -6,6 +6,7 @@
 	<!-- Header -->
 	<header id="header">
 		<h1><a href="index.html">Future Imperfect</a></h1>
+		<!-- wpNavMenu -->
 		<nav class="links">
 			<ul>
 				<li><a href="#">Lorem</a></li>
