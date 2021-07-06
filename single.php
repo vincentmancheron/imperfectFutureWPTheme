@@ -1,54 +1,5 @@
 <?php get_header(); ?>
 
-<!-- Menu -->
-<section id="menu">
-
-	<!-- Search -->
-	<section>
-		<form class="search" method="get" action="#">
-			<input type="text" name="query" placeholder="Search" />
-		</form>
-	</section>
-
-	<!-- Links -->
-	<section>
-		<ul class="links">
-			<li>
-				<a href="#">
-					<h3>Lorem ipsum</h3>
-					<p>Feugiat tempus veroeros dolor</p>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<h3>Dolor sit amet</h3>
-					<p>Sed vitae justo condimentum</p>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<h3>Feugiat veroeros</h3>
-					<p>Phasellus sed ultricies mi congue</p>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<h3>Etiam sed consequat</h3>
-					<p>Porta lectus amet ultricies</p>
-				</a>
-			</li>
-		</ul>
-	</section>
-
-	<!-- Actions -->
-	<section>
-		<ul class="actions stacked">
-			<li><a href="#" class="button large fit">Log In</a></li>
-		</ul>
-	</section>
-
-</section>
-
 <!-- Main -->
 <div id="main">
 
@@ -60,9 +11,9 @@
 			</div>
 			<div class="meta">
 				<time class="published"><?php the_time() ?></time>
-				<a href="#" class="author">
+				<a href="https://vincent-mancheron.000webhostapp.com/" target="blank" class="author">
 					<span class="name"><?php the_author() ?></span>
-					<img src="images/avatar.jpg" alt="" />
+					<img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/twix.png" alt="Toutou reporter de guerre" />
 				</a>
 			</div>
 		</header>
@@ -91,6 +42,5 @@
 			href="http://unsplash.com">Unsplash</a>.</p>
 </section>
 </div>
-</body>
 
-</html>
+<?php get_footer(); ?>

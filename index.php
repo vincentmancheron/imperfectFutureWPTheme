@@ -3,38 +3,38 @@
 	<!-- Main -->
 	<div id="main">
 
-	<?php
-	if (have_posts()) {
-		while (have_posts()) {
-			the_post(); ?> 
-			<article class="post">
-				<header>
-					<div class="title">
-						<h2><a href="<?=get_permalink()?>"><?php the_title() ?></a></h2>
-					</div>
-					<div class="meta">
-						<time class="published"><?php the_time() ?></time>
-						<a href="#" class="author">
-							<span class="name"><?php the_author() ?></span>
-							<img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/twix.png" alt="Un toutou reporter de guerre" />
-						</a>
-					</div>
-				</header>
-				<a href="<?=get_permalink()?>" class="image featured"><?php the_post_thumbnail(); ?></a>
-				<p><?php the_excerpt() ?></p>
-				<footer>
-					<ul class="actions">
-						<li><a href="<?=get_permalink()?>" class="button large">Continue Reading</a></li>
-					</ul>
-					<ul class="stats">
-						<li><a href="#">General</a></li>
-						<li><a href="#" class="icon solid fa-heart">28</a></li>
-						<li><a href="#" class="icon solid fa-comment">128</a></li>
-					</ul>
-				</footer>
-			</article>
-		<?php }
-	} ?>
+		<?php
+		if (have_posts()) {
+			while (have_posts()) {
+				the_post(); ?> 
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a href="<?=get_permalink()?>"><?php the_title() ?></a></h2>
+						</div>
+						<div class="meta">
+							<time class="published"><?php the_time() ?></time>
+							<a href="https://vincent-mancheron.000webhostapp.com/" class="author" target="_blank">
+								<span class="name"><?php the_author() ?></span>
+								<img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/twix.png" alt="Un toutou reporter de guerre" />
+							</a>
+						</div>
+					</header>
+					<a href="<?=get_permalink()?>" class="image featured"><?php the_post_thumbnail(); ?></a>
+					<p><?php the_excerpt() ?></p>
+					<footer>
+						<ul class="actions">
+							<li><a href="<?=get_permalink()?>" class="button large">Continue Reading</a></li>
+						</ul>
+						<ul class="stats">
+							<li><a href="#">General</a></li>
+							<li><a href="#" class="icon solid fa-heart">28</a></li>
+							<li><a href="#" class="icon solid fa-comment">128</a></li>
+						</ul>
+					</footer>
+				</article>
+			<?php }
+		} ?>
 
 		<!-- Pagination -->
 		<ul class="actions pagination">
@@ -65,8 +65,9 @@
 							<header>
 								<h3><a href="<?=get_permalink()?>"><?php the_title() ?></a></h3>
 								<time class="published"><?php the_time() ?></time>
+								<a href="https://vincent-mancheron.000webhostapp.com/" target="_blank" class="author"><img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/twix.png" alt="Un toutou reporter de guerre" /></a>
 							</header>
-							<a href="<?=get_permalink()?>" class="image"><?php the_post_thumbnail(); ?></a>
+							<a href="<?=get_permalink()?>" class="image frontImgMiniPost"><?php the_post_thumbnail(); ?></a>
 						</article>
 					<?php }
 				} ?>
@@ -119,3 +120,8 @@
 </div>
 
 <?php get_footer(); ?>
+
+<!-- Bugs:
+-Auteur n'apparait pas sur single.
+-Quelle classe pour inserer image de l'auteur. 
+-Générer différentes listes d'articles. -->

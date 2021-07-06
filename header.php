@@ -22,7 +22,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
         <!-- Header -->
         <header id="header">
-            <h1><a href="index.php">Future Imperfect</a></h1>
+            <h1><a href="<?=home_url($path = '',$scheme = null)?>">Future Imperfect</a></h1>
             <!-- wpNavMenu -->
             <nav class="links">
                 <?php 
