@@ -13,23 +13,22 @@
 							<h2><a href="<?=get_permalink()?>"><?php the_title() ?></a></h2>
 						</div>
 						<div class="meta">
-							<time class="published"><?php the_time() ?></time>
+							<time class="published"><?php the_time( 'F j, Y' ) ?></time>
 							<a href="https://vincent-mancheron.000webhostapp.com/" class="author" target="_blank">
 								<span class="name"><?php the_author() ?></span>
-								<img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/twix.png" alt="Un toutou reporter de guerre" />
-							</a>
+								<?=get_avatar( get_the_author_meta( 'ID' ), 40 );?>							</a>
 						</div>
 					</header>
 					<a href="<?=get_permalink()?>" class="image featured"><?php the_post_thumbnail(); ?></a>
-					<p><?php the_excerpt() ?></p>
+					<?php the_excerpt() ?>
 					<footer>
 						<ul class="actions">
 							<li><a href="<?=get_permalink()?>" class="button large">Continue Reading</a></li>
 						</ul>
 						<ul class="stats">
-							<li><a href="#">General</a></li>
+							<li><?php the_category() ?></li>
 							<li><a href="#" class="icon solid fa-heart">28</a></li>
-							<li><a href="#" class="icon solid fa-comment">128</a></li>
+							<li><?php comments_number() ?></li>
 						</ul>
 					</footer>
 				</article>
@@ -37,10 +36,9 @@
 		} ?>
 
 		<!-- Pagination -->
-		<ul class="actions pagination">
-			<li><a href="" class="disabled button large previous">Previous Page</a></li>
-			<li><a href="#" class="button large next">Next Page</a></li>
-		</ul>
+		<div class="actions pagination">
+			<?php posts_nav_link(); ?>
+		</div>
 	</div>
 
 	<!-- Sidebar -->
@@ -64,8 +62,10 @@
 						<article class="mini-post">
 							<header>
 								<h3><a href="<?=get_permalink()?>"><?php the_title() ?></a></h3>
-								<time class="published"><?php the_time() ?></time>
-								<a href="https://vincent-mancheron.000webhostapp.com/" target="_blank" class="author"><img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/twix.png" alt="Un toutou reporter de guerre" /></a>
+								<time class="published"><?php the_time( 'F j, Y' ) ?></time>
+								<a href="https://vincent-mancheron.000webhostapp.com/" target="_blank" class="author">
+									<?=get_avatar( get_the_author_meta( 'ID' ), 40 );?>
+								</a>
 							</header>
 							<a href="<?=get_permalink()?>" class="image frontImgMiniPost"><?php the_post_thumbnail(); ?></a>
 						</article>
@@ -123,5 +123,6 @@
 
 <!-- Bugs:
 -Auteur n'apparait pas sur single.
--Quelle classe pour inserer image de l'auteur. 
--Générer différentes listes d'articles. -->
+-Générer différentes listes d'articles.
+-.stats li:firstchild ne marche pas. 
+- Demander a Thierry diff front page index.-->

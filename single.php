@@ -13,15 +13,15 @@
 				<time class="published"><?php the_time() ?></time>
 				<a href="https://vincent-mancheron.000webhostapp.com/" target="blank" class="author">
 					<span class="name"><?php the_author() ?></span>
-					<img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/twix.png" alt="Toutou reporter de guerre" />
+					<?=get_avatar( get_the_author_meta( 'ID' ), 40 );?>
 				</a>
 			</div>
 		</header>
 		<?php the_post_thumbnail(); ?>
-		<p><?php the_content() ?></p>
+		<?php the_content() ?>
 		<footer>
 			<ul class="stats">
-				<li><a href="#">General</a></li>
+				<li><?php the_category() ?></li>
 				<li><a href="#" class="icon solid fa-heart">28</a></li>
 				<li><a href="#" class="icon solid fa-comment">128</a></li>
 			</ul>
