@@ -6,6 +6,7 @@ add_theme_support( 'post-thumbnails' );
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );
 
+// Déclarer les scripts/styles:
 function register_assets() {
     // Déclarer jQuery
 	wp_enqueue_script( 
@@ -70,3 +71,11 @@ function register_assets() {
 
 add_action('wp_enqueue_scripts', 'register_assets');
 add_action('wp_enqueue_styles', 'register_assets');
+
+// End Déclarer les scripts/styles
+
+// Déclarer le menu
+register_nav_menus(array(
+	'main' => 'Menu Principal',
+	'footer' => 'Bas de page',
+));
