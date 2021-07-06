@@ -48,7 +48,7 @@
 
 		<!-- Intro -->
 		<section id="intro">
-			<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+			<a href="#" class="logo"><img src="http://imperfectfuture.localhost/wp-content/uploads/2021/07/sc.jpg" alt="logo Thème" /></a>
 			<header>
 				<h2>Future Imperfect</h2>
 				<p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
