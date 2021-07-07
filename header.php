@@ -38,10 +38,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <nav class="main">
                 <ul>
                     <li class="search">
-                        <a class="fa-search" href="#search">Search</a>
-                        <form id="search" method="get" action="#">
-                            <input type="text" name="query" placeholder="Search" />
-                        </form>
+                        <?php get_search_form() ?>
                     </li>
                     <li class="menu">
                         <a class="fa-bars" href="#menu">Menu</a>

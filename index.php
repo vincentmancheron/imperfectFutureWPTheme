@@ -6,7 +6,7 @@
 		<?php
 		if (have_posts()) {
 			while (have_posts()) {
-				the_post(); ?> 
+				the_post(); ?>
 				<article class="post">
 					<header>
 						<div class="title">
@@ -56,9 +56,10 @@
 		<!-- Mini Posts -->
 		<section>
 			<div class="mini-posts">
-				<?php if (have_posts()) {
-					while (have_posts()) {
-						the_post(); ?> 
+				<?php $queryMP = new WP_Query(array('cat'=>5));
+				if ($queryMP->have_posts()) {
+					while ($queryMP->have_posts()) {
+						$queryMP->the_post(); ?> 
 						<article class="mini-post">
 							<header>
 								<h3><a href="<?=get_permalink()?>"><?php the_title() ?></a></h3>
@@ -77,9 +78,10 @@
 		<!-- Posts List -->
 		<section>
 			<ul class="posts">
-			<?php if (have_posts()) {
-					while (have_posts()) {
-						the_post(); ?>
+			<?php $queryNP = new WP_Query(array('cat'=>6));
+				if ($queryNP->have_posts()) {
+					while ($queryNP->have_posts()) {
+						$queryNP->the_post(); ?>
 						<li>
 							<article class="nano-post">
 								<header>
@@ -96,12 +98,7 @@
 
 		<!-- About -->
 		<section class="blurb">
-			<h2>About</h2>
-			<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet
-				placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
-			<ul class="actions">
-				<li><a href="#" class="button">Learn More</a></li>
-			</ul>
+			<?php get_template_part('parts/about') ?>
 		</section>
 
 		<!-- Footer -->
